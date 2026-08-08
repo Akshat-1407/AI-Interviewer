@@ -2,26 +2,32 @@
 
 ## Phase
 
-Phase 1 — Foundation
+Phase 5 — Verification & Polish (Completed)
 
 ## Current Task
 
-Inspecting provided data and Technical Specification.
+Final documentation and review.
 
 ## Completed
 
-- Project initialized
-- AI context files created
+- Backend environment initialization & requirements.txt
+- SQLite session database persistence (`database.py`)
+- Candidate and curriculum data loaders (`data_loader.py`)
+- LangGraph orchestration graph (`graph.py`) with dynamic difficulty and follow-up routing
+- Google Gemini, OpenAI, and Mock LLM adapters (`llm.py`)
+- FastAPI endpoints (`main.py`) and development runner (`run.py`)
+- Next.js JavaScript frontend scaffolding & Tailwind dark theme
+- Interactive Candidate Selector page & progress sidebar
+- Turn-based Interview Room page & evidence-based Feedback Dashboard
+- Simulation testing and verification scripts
 
 ## In Progress
 
-- Backend structure
-- Curriculum loader
-- Candidate loader
+- Updating documentation and README.md
 
 ## Working
 
-Nothing yet.
+Nothing.
 
 ## Known Issues
 
@@ -29,10 +35,9 @@ None.
 
 ## Next
 
-Implement backend data models and loaders.
+Final project delivery.
 
 ## Important
 
-Backend and frontend must remain separate.
-
+Backend and frontend are separate.
 Read `AGENTS.md` before making changes.

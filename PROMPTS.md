@@ -1,3 +1,17 @@
+# PROMPTS.md
+
+## Purpose
+
+This file contains the chronological record of prompts and requests submitted by the user to the AI coding assistant during the development of **The Interview Agent** hackathon project.
+
+The prompts document the AI-assisted development process, including project planning, implementation, configuration, debugging, architecture decisions, and deployment/setup questions.
+
+The repository files (`AGENTS.md`, `ai/`, backend, and frontend) represent the resulting implementation and are the source of truth for the final project.
+
+---
+
+## Prompt 1
+```text
 Build **The Interview Agent** hackathon project.
 
 ## Goal
@@ -29,13 +43,11 @@ The application itself must enforce the 8-question and 4-day requirements. Do no
 
 Use two separate applications:
 
-```text
 project/
 ├── backend/
 ├── frontend/
 ├── ai/
 └── AGENTS.md
-```
 
 ### Backend
 
@@ -55,7 +67,7 @@ Use:
 
 * Next.js
 * React
-* TypeScript
+* JavaScript
 * Tailwind
 * shadcn/ui
 
@@ -67,7 +79,6 @@ Use LangGraph to manage interview state.
 
 Conceptually:
 
-```text
 Candidate
    ↓
 Curriculum + Profile
@@ -85,7 +96,6 @@ Follow-up OR New Topic
 Completion
    ↓
 Feedback
-```
 
 Use structured/Pydantic outputs for LLM responses.
 
@@ -118,3 +128,115 @@ Record architectural decisions in `ai/DECISIONS.md`.
 The repository and these files are the source of truth, not the AI conversation.
 
 Start by inspecting the provided files and creating the project structure and implementation plan. Do not implement the entire project in one step.
+```
+
+---
+
+## Prompt 2
+```text
+Proceeed
+```
+
+---
+
+## Prompt 3
+```text
+proceed with the completion of the project
+```
+
+---
+
+## Prompt 4
+```text
+What is the current status of the project
+```
+
+---
+
+## Prompt 5
+```text
+is the project completed
+```
+
+---
+
+## Prompt 6
+```text
+where do i add the environemet variables and api keys
+```
+
+---
+
+## Prompt 7
+```text
+how to start the server
+```
+
+---
+
+## Prompt 8
+```text
+frontend does not have env file
+```
+
+---
+
+## Prompt 9
+```text
+can i use mysql database url
+```
+
+---
+
+## Prompt 10
+```text
+I'm getting this error (Attached Next.js PostCSS Turbopack crash screenshot)
+```
+
+---
+
+## Prompt 11
+```text
+do we need to use both llm
+```
+
+---
+
+## Prompt 12
+```text
+how to get the sqllite url
+```
+
+---
+
+## Prompt 13
+```text
+I dont have sql lite installed. I only have mysql
+```
+
+---
+
+## Prompt 14
+```text
+DATABASE_URL=sqlite:///./interview_agent.db
+
+So this env is correct and i dont need to do anything
+```
+
+---
+
+## Prompt 15
+```text
+GEMINI_MODEL=gemini-2.5-flash
+
+do i need to change this env variable
+```
+
+---
+
+## Prompt 16
+```text
+should i chage LLM_PROVIDER=mock to gemini if we are using gemini api key
+```
+
+---

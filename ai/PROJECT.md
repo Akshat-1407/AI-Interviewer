@@ -26,7 +26,7 @@ Conduct realistic personalized technical interviews using:
 
 Backend: FastAPI + Python + LangChain + LangGraph
 
-Frontend: Next.js + React + TypeScript + Tailwind + shadcn/ui
+Frontend: Next.js + React + JavaScript + Tailwind + shadcn/ui
 
 Optional: Chroma + SQLite
 
