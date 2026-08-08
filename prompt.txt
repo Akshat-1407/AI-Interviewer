@@ -1,0 +1,120 @@
+Build **The Interview Agent** hackathon project.
+
+## Goal
+
+Create an AI-powered technical interviewer that conducts a realistic, personalized, multi-turn interview based on:
+
+* the provided 31-day curriculum JSON
+* candidate profiles
+* candidate progress
+* previous interview answers
+
+The interview must feel like a real technical interview, not a static questionnaire or generic LLM chatbot.
+
+## Requirements
+
+The system must:
+
+* ask at least 8 questions
+* cover at least 4 different curriculum days
+* generate contextual follow-up questions
+* maintain interview state/context
+* adapt question difficulty
+* evaluate candidate answers
+* provide structured, evidence-based feedback at the end
+
+The application itself must enforce the 8-question and 4-day requirements. Do not rely on the LLM to enforce them.
+
+## Architecture
+
+Use two separate applications:
+
+```text
+project/
+├── backend/
+├── frontend/
+├── ai/
+└── AGENTS.md
+```
+
+### Backend
+
+Use:
+
+* Python
+* FastAPI
+* Pydantic
+* LangChain
+* LangGraph
+* SQLite if persistence is needed
+* Chroma/vector search only if useful
+
+### Frontend
+
+Use:
+
+* Next.js
+* React
+* TypeScript
+* Tailwind
+* shadcn/ui
+
+The frontend communicates with the backend through APIs.
+
+## AI Architecture
+
+Use LangGraph to manage interview state.
+
+Conceptually:
+
+```text
+Candidate
+   ↓
+Curriculum + Profile
+   ↓
+Interview Plan
+   ↓
+Question
+   ↓
+Candidate Answer
+   ↓
+Evaluation
+   ↓
+Follow-up OR New Topic
+   ↓
+Completion
+   ↓
+Feedback
+```
+
+Use structured/Pydantic outputs for LLM responses.
+
+The LLM should handle language generation and evaluation, while deterministic application code controls interview state, constraints, scoring, and progression.
+
+Use the supplied Technical Specification as the authoritative API contract.
+
+Do not overengineer the project.
+
+## Important
+
+Before coding:
+
+1. Inspect the supplied curriculum.
+2. Inspect candidate profiles.
+3. Inspect the Technical Specification.
+4. Create `AGENTS.md` and the `ai/` context files.
+5. Create an implementation plan in `ai/TASKS.md`.
+
+Then implement incrementally.
+
+After every meaningful task, update:
+
+* `ai/CURRENT_STATE.md`
+* `ai/TASKS.md`
+* `ai/SESSION_LOG.md`
+
+Record architectural decisions in `ai/DECISIONS.md`.
+
+The repository and these files are the source of truth, not the AI conversation.
+
+Start by inspecting the provided files and creating the project structure and implementation plan. Do not implement the entire project in one step.
