@@ -39,6 +39,24 @@ Next:
 
 ---
 
+## 2026-08-09 — Antigravity (Deployment Session)
+
+Completed:
+- Modified `frontend/src/app/page.js` to dynamically load `NEXT_PUBLIC_API_URL` environment variable, making it production-ready.
+- Created `ai/DEPLOYMENT.md` containing detailed step-by-step instructions for hosting on Vercel and Render, including persistent SQLite storage configuration.
+- Logged changes in `ai/CURRENT_STATE.md` and `ai/SESSION_LOG.md`.
+
+Changed:
+- Changed API client requests in frontend to query dynamic host values.
+
+Issues:
+- None.
+
+Next:
+- Connect code repository to Vercel and Render dashboards.
+
+---
+
 ## Template
 
 ### YYYY-MM-DD — AI Name

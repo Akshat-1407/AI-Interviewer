@@ -18,8 +18,9 @@ Final documentation and review.
 - FastAPI endpoints (`main.py`) and development runner (`run.py`)
 - Next.js JavaScript frontend scaffolding & Tailwind dark theme
 - Interactive Candidate Selector page & progress sidebar
-- Turn-based Interview Room page & evidence-based Feedback Dashboard
 - Simulation testing and verification scripts
+- Production deployment configuration using environment variables
+- Comprehensive Vercel and Render deployment guide (`DEPLOYMENT.md`)
 
 ## In Progress
 
