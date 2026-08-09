@@ -7,7 +7,6 @@ This file contains the chronological record of prompts and requests submitted by
 The prompts document the AI-assisted development process, including project planning, implementation, configuration, debugging, architecture decisions, and deployment/setup questions.
 
 The repository files (`AGENTS.md`, `ai/`, backend, and frontend) represent the resulting implementation and are the source of truth for the final project.
-
 ---
 
 ## Prompt 1
@@ -190,7 +189,7 @@ can i use mysql database url
 
 ## Prompt 10
 ```text
-I'm getting this error (Attached Next.js PostCSS Turbopack crash screenshot)
+I'm getting this error (Attached Next.js PostCSS Turbopack compilation crash screenshot)
 ```
 
 ---
@@ -240,3 +239,65 @@ should i chage LLM_PROVIDER=mock to gemini if we are using gemini api key
 ```
 
 ---
+
+## Prompt 17
+```text
+enhance the fontend ui of page.jsx
+```
+
+---
+
+## Prompt 18
+```text
+add a footer and info or explanation panel at the top
+```
+
+---
+
+## Prompt 19
+```text
+When i access profile button then the page that opens does not have proper ui
+```
+
+---
+
+## Prompt 20
+```text
+write a readme file for this project
+```
+
+---
+
+## Prompt 21
+```text
+difference bw .env and .env.template
+```
+
+---
+
+## Prompt 22
+```text
+How to host this project in verecl and render. What changes in the code do we need to make for deployment
+```
+
+---
+
+## Prompt 23
+```text
+rewrite the page.jsx quit session should give a popup or dialogue. Enhance the UI, and make sure the ui when we go on access candidate does not break
+```
+
+---
+
+## Prompt 24
+```text
+now I want you the break this huge file in various components and make sure the current ui and functionality should not change
+```
+
+---
+
+## Prompt 25
+```text
+proceed
+```
+
