@@ -52,10 +52,18 @@ Changed:
 - Refactored root `page.js` (now 217 lines) to orchestrate client-side states and routes, passing handlers down to children.
 
 Issues:
+- Added sun/moon theme switch toggle button to frontend navigation header.
+- Implemented global light theme overrides in `globals.css` to permit full dashboard styling flips (backgrounds, cards, text, and active timelines) without altering react component JSX.
+- Logged changes in `ai/CURRENT_STATE.md` and `ai/SESSION_LOG.md`.
+
+Changed:
+- Integrated a `theme` hooks state engine into root controller `page.jsx` and synchronized changes with `document.documentElement` class configurations.
+
+Issues:
 - None.
 
 Next:
-- Connect code repository to Vercel and Render dashboards.
+- Deploy updated assets to Vercel and Render services.
 
 ---
 

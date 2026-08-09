@@ -301,3 +301,9 @@ now I want you the break this huge file in various components and make sure the 
 proceed
 ```
 
+## Prompt 26
+```text
+implement light and dark mode feature. Make sure you dont change the current functionality or the code structure.
+```
+
+

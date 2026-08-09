@@ -21,6 +21,7 @@ Final documentation and review.
 - Simulation testing and verification scripts
 - Production deployment configuration using environment variables
 - Comprehensive Vercel and Render deployment guide (`DEPLOYMENT.md`)
+- Light & Dark theme mode switcher integration (`globals.css`, `Header.jsx`, `page.jsx`)
 
 ## In Progress
 

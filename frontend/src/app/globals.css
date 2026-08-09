@@ -14,6 +14,7 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Custom Scrollbar */
@@ -29,4 +30,183 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #374151;
+}
+
+/* ==========================================
+   LIGHT MODE OVERRIDES
+   ========================================== */
+html.light body {
+  --background: #f8fafc; /* slate-50 */
+  --foreground: #0f172a; /* slate-900 */
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1; /* slate-300 */
+}
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; /* slate-400 */
+}
+
+/* Backgrounds & Cards */
+html.light .bg-slate-950 {
+  background-color: #f8fafc !important;
+}
+html.light .bg-slate-900\/40, 
+html.light .bg-slate-900\/50,
+html.light .bg-slate-900\/60,
+html.light .bg-slate-900\/80 {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(12px);
+}
+html.light .bg-slate-950\/20,
+html.light .bg-slate-950\/40,
+html.light .bg-slate-950\/50,
+html.light .bg-slate-950\/60,
+html.light .bg-slate-950\/80 {
+  background-color: rgba(241, 245, 249, 0.8) !important;
+}
+
+/* Inputs & Form Elements */
+html.light textarea,
+html.light input,
+html.light select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+html.light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Borders */
+html.light .border-slate-800,
+html.light .border-slate-850,
+html.light .border-slate-900,
+html.light .border-slate-800\/65,
+html.light .border-slate-800\/80,
+html.light .border-slate-855 {
+  border-color: #cbd5e1 !important; /* slate-300 */
+}
+
+/* Main Text Colors */
+html.light .text-slate-100,
+html.light .text-slate-150,
+html.light .text-slate-200,
+html.light .text-slate-250,
+html.light .text-slate-300,
+html.light .text-slate-350,
+html.light .text-slate-400,
+html.light .text-slate-450,
+html.light .text-slate-500,
+html.light .text-slate-550,
+html.light .text-slate-650 {
+  color: #334155 !important; /* slate-700 */
+}
+
+html.light .text-slate-100.font-extrabold,
+html.light .text-white,
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light h5,
+html.light h6 {
+  color: #0f172a !important; /* slate-900 */
+}
+
+/* Exceptions: Preserve contrast on Indigo Buttons and badging text */
+html.light .bg-indigo-600 .text-white,
+html.light .bg-indigo-600 .text-slate-300,
+html.light .bg-rose-600 .text-white,
+html.light button.bg-indigo-650,
+html.light button.bg-indigo-600,
+html.light button.bg-rose-600,
+html.light button.bg-rose-600 .text-white,
+html.light .bg-gradient-to-br.from-indigo-600 .text-white,
+html.light .bg-gradient-to-br.from-indigo-600 .text-slate-100,
+html.light .bg-gradient-to-br.from-indigo-600 span {
+  color: #ffffff !important;
+}
+
+/* Cohort Dashboard Badging */
+html.light .bg-slate-900 {
+  background-color: #f1f5f9 !important;
+}
+html.light .bg-slate-900.group-hover\:bg-indigo-600:hover {
+  background-color: #4f46e5 !important;
+}
+html.light .bg-slate-900.group-hover\:bg-indigo-600:hover .text-slate-300 {
+  color: #ffffff !important;
+}
+
+/* Sidebar Timeline Active States */
+html.light .bg-indigo-950\/30 {
+  background-color: rgba(99, 102, 241, 0.15) !important;
+  color: #4f46e5 !important;
+  border-color: rgba(99, 102, 241, 0.4) !important;
+}
+html.light .bg-indigo-950\/30 span {
+  color: #4f46e5 !important;
+}
+
+/* Speach Bubbles - Interviewer */
+html.light .bg-slate-900\/80 {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+  color: #1e293b !important;
+}
+html.light .bg-slate-900\/80 span {
+  color: #4f46e5 !important;
+}
+
+/* Typing Bubbles Base */
+html.light .bg-slate-950.rounded-xl {
+  background-color: #e2e8f0 !important;
+}
+
+/* Custom Modal confirmation */
+html.light .bg-slate-900.border.border-slate-800 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+html.light .bg-slate-900.border.border-slate-800 p {
+  color: #475569 !important;
+}
+
+/* Score track indicator circle */
+html.light svg circle[stroke="#1f2937"] {
+  stroke: #e2e8f0 !important;
+}
+
+/* Interactive Next recommendations */
+html.light .bg-slate-950\/80.border-slate-855 {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+}
+html.light .bg-slate-950\/80.border-slate-855:hover {
+  border-color: rgba(99, 102, 241, 0.45) !important;
+}
+html.light .bg-indigo-550\/10,
+html.light .bg-indigo-500\/10 {
+  background-color: rgba(99, 102, 241, 0.15) !important;
+}
+
+/* Top explanation alert */
+html.light .bg-gradient-to-r.from-indigo-950\/30 {
+  background: linear-gradient(to right, rgba(99, 102, 241, 0.12), rgba(34, 211, 238, 0.05)) !important;
+  border-color: rgba(99, 102, 241, 0.3) !important;
+}
+html.light .bg-gradient-to-r.from-indigo-950\/30 h3 {
+  color: #4f46e5 !important;
+}
+
+/* Decorative Orbs In Light Mode */
+html.light .bg-indigo-900\/10 {
+  background-color: rgba(99, 102, 241, 0.15) !important;
+}
+html.light .bg-cyan-900\/10 {
+  background-color: rgba(34, 211, 238, 0.15) !important;
 }

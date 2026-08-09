@@ -29,6 +29,17 @@ export default function Home() {
   const [backendStatus, setBackendStatus] = useState('checking'); // 'checking', 'online', 'offline'
   const [showInfoPanel, setShowInfoPanel] = useState(true);
   const [showQuitModal, setShowQuitModal] = useState(false);
+  const [theme, setTheme] = useState('dark');
+
+  // Sync theme selection to document element
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (theme === 'light') {
+      root.classList.add('light');
+    } else {
+      root.classList.remove('light');
+    }
+  }, [theme]);
 
   // Fetch candidate profiles and curriculum on load
   useEffect(() => {
@@ -145,7 +156,12 @@ export default function Home() {
       <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-cyan-900/10 blur-[100px] pointer-events-none" />
 
       {/* Header section */}
-      <Header step={step} onQuitClick={() => setShowQuitModal(true)} />
+      <Header 
+        step={step} 
+        onQuitClick={() => setShowQuitModal(true)} 
+        theme={theme} 
+        onToggleTheme={() => setTheme(prev => prev === 'dark' ? 'light' : 'dark')} 
+      />
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl mx-auto w-full p-4 sm:p-6 flex flex-col justify-start relative z-10 min-h-0">
