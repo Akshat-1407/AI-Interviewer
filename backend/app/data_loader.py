@@ -2,18 +2,18 @@ import os
 import json
 from typing import List, Dict, Any, Optional
 
-# Find workspace root relative to this file
+# Find backend directory relative to this file
 # This file is in: workspace/backend/app/data_loader.py
-# Root is: workspace/
-ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Backend dir is: workspace/backend/
+BACKEND_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def load_curriculum() -> Dict[str, Any]:
-    path = os.path.join(ROOT_DIR, "curriculum.json")
+    path = os.path.join(BACKEND_DIR, "curriculum.json")
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 def load_candidates() -> List[Dict[str, Any]]:
-    path = os.path.join(ROOT_DIR, "candidates.json")
+    path = os.path.join(BACKEND_DIR, "candidates.json")
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
         return data.get("candidates", [])

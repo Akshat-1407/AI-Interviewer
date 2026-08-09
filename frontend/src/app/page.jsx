@@ -3,12 +3,12 @@
 import React, { useState, useEffect } from 'react';
 import { AlertCircle } from 'lucide-react';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-import QuitModal from './components/QuitModal';
-import CandidateSelector from './components/CandidateSelector';
-import InterviewRoom from './components/InterviewRoom';
-import FeedbackReport from './components/FeedbackReport';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import QuitModal from '../components/QuitModal';
+import CandidateSelector from '../components/CandidateSelector';
+import InterviewRoom from '../components/InterviewRoom';
+import FeedbackReport from '../components/FeedbackReport';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
 

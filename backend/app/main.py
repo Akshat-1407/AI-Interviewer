@@ -10,15 +10,24 @@ from dotenv import load_dotenv
 
 app = FastAPI(title="The Interview Agent API", version="1.0.0")
 
-FRONTEND_URL = os.getenv("FRONTEND_URL", "")
+backend_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+load_dotenv(os.path.join(backend_dir, '.env'))
+
+FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000")
+FRONTEND_ORIGINS = list(
+    dict.fromkeys(
+        [
+            FRONTEND_URL,
+            "http://localhost:3000",
+            "http://127.0.0.1:3000",
+        ]
+    )
+)
 
 # Enable CORS for frontend integration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        FRONTEND_URL,
-        "http://localhost:3000"
-    ],  
+    allow_origins=FRONTEND_ORIGINS,
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
