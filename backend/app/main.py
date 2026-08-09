@@ -5,14 +5,21 @@ from typing import Dict, Any, Optional, List
 from .database import save_session_state, load_session_state
 from .data_loader import select_interview_days, load_candidates, load_curriculum
 from .graph import interview_graph
+import os
+from dotenv import load_dotenv
 
 app = FastAPI(title="The Interview Agent API", version="1.0.0")
+
+FRONTEND_URL = os.getenv("FRONTEND_URL", "")
 
 # Enable CORS for frontend integration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Next.js frontend (e.g. http://localhost:3000)
-    allow_credentials=True,
+    allow_origins=[
+        FRONTEND_URL,
+        "http://localhost:3000"
+    ],  
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )

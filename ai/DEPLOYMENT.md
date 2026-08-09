@@ -22,7 +22,7 @@ Vercel is the native platform for Next.js, requiring minimal setup:
 
 ### Steps:
 1.  **Sign Up / Log In**: Connect your GitHub account to [Vercel](https://vercel.com).
-2.  **Import Repo**: Click **Add New** > **Project** and select your `AI-Interviewer` repository.
+2.  **Import Repo**: Click **Add New** > **Project** and select your `The-Interview-Agent` repository.
 3.  **Configure Directory**:
     *   In the **Root Directory** setting, click Edit and select the **`frontend`** directory.
 4.  **Environment Variables**:
@@ -41,7 +41,7 @@ Render is a robust cloud provider for hosting Python/FastAPI web services:
 ### Steps:
 1.  **Log In**: Sign in to [Render](https://render.com) and link your GitHub.
 2.  **Create Service**: Click **New +** > **Web Service**.
-3.  **Connect Repo**: Select your `AI-Interviewer` repository.
+3.  **Connect Repo**: Select your `The-Interview-Agent` repository.
 4.  **Configure Settings**:
     *   **Name**: `interview-agent-api` (or similar)
     *   **Region**: Select a region close to your users.

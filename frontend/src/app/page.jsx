@@ -156,11 +156,11 @@ export default function Home() {
       <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-cyan-900/10 blur-[100px] pointer-events-none" />
 
       {/* Header section */}
-      <Header 
-        step={step} 
-        onQuitClick={() => setShowQuitModal(true)} 
-        theme={theme} 
-        onToggleTheme={() => setTheme(prev => prev === 'dark' ? 'light' : 'dark')} 
+      <Header
+        step={step}
+        onQuitClick={() => setShowQuitModal(true)}
+        theme={theme}
+        onToggleTheme={() => setTheme(prev => prev === 'dark' ? 'light' : 'dark')}
       />
 
       {/* Main Content Area */}
@@ -174,32 +174,34 @@ export default function Home() {
 
         {/* 1. SELECT CANDIDATE SCREEN */}
         {step === 'select' && (
-          <CandidateSelector
-            candidates={candidates}
-            loadingCandidates={loadingCandidates}
-            showInfoPanel={showInfoPanel}
-            setShowInfoPanel={setShowInfoPanel}
-            onStartInterview={handleStartInterview}
-          />
+          <>
+            <CandidateSelector
+              candidates={candidates}
+              loadingCandidates={loadingCandidates}
+              showInfoPanel={showInfoPanel}
+              setShowInfoPanel={setShowInfoPanel}
+              onStartInterview={handleStartInterview}
+            />
+
+            {/* Footer bar */}
+            <Footer backendStatus={backendStatus} />
+          </>
         )}
 
         {/* 2. INTERVIEW ROOM SCREEN */}
         {step === 'interview' && selectedCandidate && (
-          <InterviewRoom
-            selectedCandidate={selectedCandidate}
-            curriculum={curriculum}
-            messages={messages}
-            selectedDays={selectedDays}
-            currentQuestionIdx={currentQuestionIdx}
-            isTyping={isTyping}
-            inputValue={inputValue}
-            setInputValue={setInputValue}
-            onSendMessage={handleSendMessage}
+            <InterviewRoom
+              selectedCandidate={selectedCandidate}
+              curriculum={curriculum}
+              messages={messages}
+              selectedDays={selectedDays}
+              currentQuestionIdx={currentQuestionIdx}
+              isTyping={isTyping}
+              inputValue={inputValue}
+              setInputValue={setInputValue}
+              onSendMessage={handleSendMessage}
           />
         )}
-
-        {/* Footer bar */}
-        <Footer backendStatus={backendStatus} />
 
         {/* 3. FEEDBACK REPORT SCREEN */}
         {step === 'feedback' && selectedCandidate && feedback && (
