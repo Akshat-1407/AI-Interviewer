@@ -44,10 +44,12 @@ Next:
 Completed:
 - Modified `frontend/src/app/page.js` to dynamically load `NEXT_PUBLIC_API_URL` environment variable, making it production-ready.
 - Created `ai/DEPLOYMENT.md` containing detailed step-by-step instructions for hosting on Vercel and Render, including persistent SQLite storage configuration.
+- Restructured frontend codebase: broke down monolithic `page.js` (766 lines) into modular subcomponents (`Header.js`, `Footer.js`, `QuitModal.js`, `CandidateSelector.js`, `InterviewRoom.js`, `FeedbackReport.js`) under `components/` directory.
 - Logged changes in `ai/CURRENT_STATE.md` and `ai/SESSION_LOG.md`.
 
 Changed:
 - Changed API client requests in frontend to query dynamic host values.
+- Refactored root `page.js` (now 217 lines) to orchestrate client-side states and routes, passing handlers down to children.
 
 Issues:
 - None.
